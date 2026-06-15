@@ -1,43 +1,67 @@
-export default function Footer() {
-  const year = new Date().getFullYear()
+import { Link } from '@tanstack/react-router'
 
+export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-[var(--line)] px-4 pb-14 pt-10 text-[var(--sea-ink-soft)]">
-      <div className="page-wrap flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-        <p className="m-0 text-sm">
-          &copy; {year} Your name here. All rights reserved.
-        </p>
-        <p className="island-kicker m-0">Built with TanStack Start</p>
-      </div>
-      <div className="mt-4 flex justify-center gap-4">
-        <a
-          href="https://x.com/tan_stack"
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-xl p-2 text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)]"
-        >
-          <span className="sr-only">Follow TanStack on X</span>
-          <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-            <path
-              fill="currentColor"
-              d="M12.6 1h2.2L10 6.48 15.64 15h-4.41L7.78 9.82 3.23 15H1l5.14-5.84L.72 1h4.52l3.12 4.73L12.6 1zm-.77 12.67h1.22L4.57 2.26H3.26l8.57 11.41z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://github.com/TanStack"
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-xl p-2 text-[var(--sea-ink-soft)] transition hover:bg-[var(--link-bg-hover)] hover:text-[var(--sea-ink)]"
-        >
-          <span className="sr-only">Go to TanStack GitHub</span>
-          <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-            <path
-              fill="currentColor"
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-            />
-          </svg>
-        </a>
+    <footer style={{ background: 'var(--dark-mid)', borderTop: '1px solid var(--dark-border)', padding: '3rem 1.5rem 2rem' }}>
+      <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
+          <div>
+            <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem' }}>
+              WIRE<span style={{ color: 'var(--fire)' }}>FIRE</span> FTC
+            </div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+              Team #23260 · Lake Oswego, Oregon<br />
+              Middle & High School FIRST Tech Challenge
+            </div>
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <a href="https://www.instagram.com/wirefireftc23260/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.75rem', transition: 'color 0.15s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--fire)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}>Instagram</a>
+              <span style={{ color: 'var(--text-dim)' }}>·</span>
+              <a href="https://www.youtube.com/@Wirefire_FTC" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.75rem', transition: 'color 0.15s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--fire)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}>YouTube</a>
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: 'var(--fire)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>Navigate</div>
+            {[['/', 'Home'], ['/team', 'Team'], ['/robotics', 'Robotics'], ['/fundraising', 'Fundraising'], ['/sponsorship', 'Sponsorship'], ['/camp', '2025 FTC Camp']].map(([to, label]) => (
+              <Link key={to} to={to} style={{ display: 'block', color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.8rem', lineHeight: 2, transition: 'color 0.15s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = 'var(--white)')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}>
+                {label}
+              </Link>
+            ))}
+          </div>
+          <div>
+            <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: 'var(--fire)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>Contact</div>
+            <a href="mailto:wirefireftc@gmail.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.8rem', display: 'block', lineHeight: 2 }}>wirefireftc@gmail.com</a>
+            <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', lineHeight: 2 }}>Lake Oswego High School</div>
+            <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', lineHeight: 2 }}>Lake Oswego, Oregon</div>
+            <div style={{ marginTop: '0.75rem' }}>
+              <a href="https://www.paypal.com/us/fundraiser/charity/4550355" target="_blank" rel="noopener noreferrer" style={{
+                display: 'inline-block', background: 'linear-gradient(135deg, var(--fire), var(--fire-glow))',
+                color: 'white', textDecoration: 'none', padding: '0.45rem 1rem',
+                borderRadius: '0.35rem', fontSize: '0.75rem', fontWeight: 700,
+              }}>
+                Donate via PayPal →
+              </a>
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: 'var(--fire)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>Nonprofit Info</div>
+            <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: 2 }}>
+              <div>501(c)(3) Tax-Exempt</div>
+              <div>EIN: 46-1308704</div>
+              <div>Lake Oswego Robotics</div>
+              <div style={{ marginTop: '0.25rem', fontSize: '0.7rem', color: 'var(--text-dim)' }}>Donations are tax-deductible</div>
+            </div>
+          </div>
+        </div>
+        <div style={{ borderTop: '1px solid var(--dark-border)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+          <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>© 2025 Wire Fire FTC #23260. All rights reserved.</span>
+          <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>Built by the team 🔥</span>
+        </div>
       </div>
     </footer>
   )
