@@ -2,18 +2,18 @@
 @import "tailwindcss";
 
 :root {
-  --fire: #e8006a;
-  --fire-bright: #ff2d8a;
-  --fire-glow: #c0005a;
+  --fire: #ff006a;
+  --fire-bright: #ff4da0;
+  --fire-glow: #d40059;
   --pink-soft: #ff006a; 
-  --pink-dim: rgba(232,0,106,0.15);
+  --pink-dim: rgba(255,0,106,0.15);
   --dark: #0e0a0e;
   --dark-mid: #130d13;
   --dark-card: #1a111a;
-  --dark-border: rgba(232,0,106,0.1);
-  --text: #f0e0ec;
-  --text-muted: #9a7a90;
-  --text-dim: #5a3a52;
+  --dark-border: rgba(255,0,106,0.1);
+  --text: #f5edf2;
+  --text-muted: #c4a8bc;
+  --text-dim: #8a6a80;
   --white: #FFFFFF;
 }
 
