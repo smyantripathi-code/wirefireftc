@@ -19,10 +19,10 @@ const goals2026 = [
 ]
 
 const highlights = [
-  { title: 'Build', desc: 'We design and manufacture robots from scratch — chassis, drivetrains, arms, and custom mechanisms.' },
+  { title: 'Build', desc: 'We design and manufacture robots from scratch, chassis, drivetrains, arms, and custom mechanisms.' },
   { title: 'Code', desc: 'Our programmers write Java to control autonomous movement, sensors, and real-time driver input.' },
   { title: '3D Print & CAD', desc: 'Custom parts designed in CAD and printed in-house. We iterate fast and build smart.' },
-  { title: 'Outreach', desc: 'From community fundraisers to robotics camps — we earn our way and give back.' },
+  { title: 'Outreach', desc: 'From community fundraisers to robotics camps, we earn our way and give back.' },
 ]
 
 function Home() {
