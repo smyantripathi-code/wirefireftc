@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
           <div>
             <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: 'var(--fire)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>Navigate</div>
-            {[['/', 'Home'], ['/team', 'Team'], ['/robotics', 'Robotics'], ['/fundraising', 'Fundraising'], ['/sponsorship', 'Sponsorship'], ['/camp', '2025 FTC Camp']].map(([to, label]) => (
+            {([['/', 'Home'], ['/team', 'Team'], ['/history', 'History'], ['/community', 'Community'], ['/robotics', 'Robotics'], ['/fundraising', 'Fundraising'], ['/sponsorship', 'Sponsorship']] as const).map(([to, label]) => (
               <Link key={to} to={to} style={{ display: 'block', color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.8rem', lineHeight: 2, transition: 'color 0.15s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = 'var(--white)')}
                 onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}>
@@ -36,7 +36,6 @@ export default function Footer() {
           <div>
             <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: 'var(--fire)', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.75rem' }}>Contact</div>
             <a href="mailto:wirefireftc@gmail.com" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.8rem', display: 'block', lineHeight: 2 }}>wirefireftc@gmail.com</a>
-            <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', lineHeight: 2 }}>Lake Oswego High School</div>
             <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', lineHeight: 2 }}>Lake Oswego, Oregon</div>
             <div style={{ marginTop: '0.75rem' }}>
               <a href="https://www.paypal.com/us/fundraiser/charity/4550355" target="_blank" rel="noopener noreferrer" style={{
@@ -44,7 +43,7 @@ export default function Footer() {
                 color: 'white', textDecoration: 'none', padding: '0.45rem 1rem',
                 borderRadius: '0.35rem', fontSize: '0.75rem', fontWeight: 700,
               }}>
-                Donate via PayPal →
+                Donate via PayPal
               </a>
             </div>
           </div>
@@ -59,8 +58,8 @@ export default function Footer() {
           </div>
         </div>
         <div style={{ borderTop: '1px solid var(--dark-border)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-          <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>© 2025 Wire Fire FTC #23260. All rights reserved.</span>
-          <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>Built by the team 🔥</span>
+          <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>© 2026 Wire Fire FTC #23260. All rights reserved.</span>
+          <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>Built by the team</span>
         </div>
       </div>
     </footer>
