@@ -1,4 +1,3 @@
-```tsx
 import { Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 
@@ -244,4 +243,3 @@ export default function Header() {
     </header>
   )
 }
-```
