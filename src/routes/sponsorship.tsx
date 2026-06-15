@@ -119,11 +119,11 @@ function SponsorshipPage() {
 
       {/* Sponsor form */}
       <section style={{ padding: '3.5rem 1.5rem', background: 'var(--dark)', borderTop: '1px solid var(--dark-border)' }}>
-        <div style={{ margin: '0 auto' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: 'var(--fire)', letterSpacing: '0.2em', marginBottom: '0.5rem' }}>// Get In Touch</div>
               <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSfKn-7dYyh_QiJ-1uZ37SXMiG2PbOsJC2w4jezVJCgk_wgGqg/viewform?usp=sharing&ouid=105617262024080995837"
-            width="50%"
+            width="100%"
             height="900"
             frameBorder="0"
             marginHeight={0}
