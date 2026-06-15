@@ -14,7 +14,7 @@ function ContactPage() {
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: 'var(--fire)', letterSpacing: '0.2em', marginBottom: '0.5rem' }}>// Get In Touch</div>
           <h1 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 900, color: 'var(--white)', marginBottom: '0.75rem' }}>Contact</h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.93rem', lineHeight: 1.8, marginBottom: '2rem', maxWidth: '520px' }}>
-            Reach out through the form below, or find us directly at the links on the right.
+            Fill out the form below or reach us directly through any of these channels.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '360px' }}>
             {[
@@ -43,7 +43,7 @@ function ContactPage() {
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: 'var(--text-muted)', letterSpacing: '0.2em', marginBottom: '1.25rem' }}>// Contact Form</div>
           <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfuw1UVibnyqSmoBfj7/viewform?embedded=true"
+            src="https://forms.gle/uw1UVibnyqSmoBfj7"
             width="100%"
             height="900"
             frameBorder="0"
