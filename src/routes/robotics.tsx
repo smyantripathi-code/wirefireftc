@@ -21,42 +21,22 @@ function RoboticsPage() {
 
       {/* What is FTC */}
       <section style={{ padding: '3.5rem 1.5rem', background: 'var(--dark)' }}>
-        <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem' }}>
-          <div>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: 'var(--fire)', letterSpacing: '0.2em', marginBottom: '0.75rem' }}>// What is FTC?</div>
-            <h2 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.5rem', fontWeight: 700, color: 'var(--white)', marginBottom: '1rem' }}>FIRST Tech Challenge</h2>
-            <p style={{ color: 'var(--text-muted)', lineHeight: 1.85, fontSize: '0.92rem', marginBottom: '1rem' }}>
-              Each season, FTC releases a new game with specific objectives. Teams design, build, and program robots to compete — blending mechanical engineering, software, and strategy.
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: 'var(--fire)', letterSpacing: '0.2em', marginBottom: '0.75rem' }}>// What is FTC?</div>
+          <h2 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.5rem', fontWeight: 700, color: 'var(--white)', marginBottom: '1.25rem' }}>FIRST Tech Challenge</h2>
+          <p style={{ color: 'var(--text-muted)', lineHeight: 1.9, fontSize: '0.95rem', marginBottom: '1rem' }}>
+            FIRST Tech Challenge is a middle and high school robotics competition where student teams design, build, and program robots from scratch each season. Every year, FIRST releases a brand-new game with unique objectives, scoring zones, and rules - forcing teams to engineer creative solutions under real constraints.
+          </p>
+          <p style={{ color: 'var(--text-muted)', lineHeight: 1.9, fontSize: '0.95rem', marginBottom: '1rem' }}>
+            Matches are two minutes long. The first 30 seconds are fully autonomous - the robot operates entirely on pre-programmed code with no driver input. The remaining 90 seconds are driver-controlled, where students pilot the robot in real time. All programming is done in Java.
+          </p>
+          <p style={{ color: 'var(--text-muted)', lineHeight: 1.9, fontSize: '0.95rem', marginBottom: '1.75rem' }}>
+            FTC is not purely a technical competition. Teams are also evaluated by judges on their engineering design process, documentation (the Engineering Portfolio), outreach work, and a live team interview. Awards like the Inspire Award, Think Award, and Connect Award recognize excellence beyond just robot performance - making FTC as much about people as it is about hardware.
+          </p>
+          <div style={{ borderLeft: '2px solid rgba(255,0,106,0.35)', paddingLeft: '1.25rem' }}>
+            <p style={{ color: 'var(--text-muted)', lineHeight: 1.85, fontSize: '0.88rem', fontStyle: 'italic' }}>
+              Wire Fire competes in the Iron Mountain League in Oregon. The season runs from September through February, with league meets leading to a regional tournament and then the Oregon State Championship.
             </p>
-            <p style={{ color: 'var(--text-muted)', lineHeight: 1.85, fontSize: '0.92rem', marginBottom: '1rem' }}>
-              Robots are programmed in Java, performing a 30-second autonomous period followed by a 90-second driver-controlled period in each 2-minute match.
-            </p>
-            <p style={{ color: 'var(--text-muted)', lineHeight: 1.85, fontSize: '0.92rem' }}>
-              Teams are also judged on their engineering process, design documentation, outreach, and team presentation — making FTC as much about people as it is about robots.
-            </p>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-            {[
-              { num: '01', title: 'Design & Build', desc: 'Teams design robots from scratch with motors, sensors, and custom fabricated parts. Wire Fire emphasizes simple, reliable mechanisms.' },
-              { num: '02', title: 'Programming', desc: 'Students code autonomous routines and driver-controlled behavior in Java, using sensors and computer vision.' },
-              { num: '03', title: 'Competition', desc: '2-minute matches: 30s autonomous + 90s driver-controlled. Alliances of two teams compete head-to-head.' },
-              { num: '04', title: 'Judging', desc: 'Teams are judged on engineering process, design notebook, outreach impact, and a live team interview.' },
-            ].map(item => (
-              <div key={item.num} style={{
-                display: 'flex', gap: '1rem', alignItems: 'flex-start',
-                background: 'var(--dark-card)', border: '1px solid var(--dark-border)',
-                borderRadius: '0.5rem', padding: '0.875rem 1rem',
-                transition: 'border-color 0.2s',
-              }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(232,0,106,0.3)')}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--dark-border)')}>
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", color: 'var(--fire)', fontSize: '0.75rem', fontWeight: 700, flexShrink: 0, marginTop: '0.1rem' }}>{item.num}</span>
-                <div>
-                  <div style={{ fontWeight: 700, color: 'var(--white)', fontSize: '0.875rem', marginBottom: '0.2rem' }}>{item.title}</div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem', lineHeight: 1.6 }}>{item.desc}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -67,39 +47,15 @@ function RoboticsPage() {
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.7rem', color: 'var(--text-dim)', letterSpacing: '0.2em', marginBottom: '0.5rem' }}>// 2025 Season Robot</div>
           <h2 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.75rem', fontWeight: 700, color: 'var(--white)', marginBottom: '2rem' }}>Our Robot</h2>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2.5rem', alignItems: 'center' }}>
-            {/* Robot photo */}
-            <div style={{ borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(232,0,106,0.2)', boxShadow: '0 0 40px rgba(232,0,106,0.1)' }}>
-              <img
-                src="/ChampRobot-2.jpg"
-                alt="Wire Fire #23260 — 2025 Competition Robot"
-                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-              />
-            </div>
-
-            {/* Robot details */}
-            <div>
-              <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.2rem', fontWeight: 700, color: 'var(--white)', marginBottom: '0.5rem' }}>Wire Fire #23260</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--fire)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>2025 INTO THE DEEP — Competition Robot</div>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.85, fontSize: '0.92rem', marginBottom: '1.25rem' }}>
-                Our 2025 competition robot was built around a philosophy of simplicity and reliability. Clean wiring, minimal moving parts, and a compact footprint — optimized for consistent performance across every match at league meets and the Oregon State Championship.
-              </p>
-              <p style={{ color: 'var(--text-muted)', lineHeight: 1.85, fontSize: '0.92rem', marginBottom: '1.5rem' }}>
-                The robot features a vertical linear slide system for scoring, custom 3D-printed components, and a REV Control Hub running Java-based autonomous routines. High score: 140 points.
-              </p>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                {[
-                  { label: 'High Score', val: '140' },
-                  { label: 'Season', val: '2024–25' },
-                  { label: 'League', val: 'Rose City' },
-                ].map(s => (
-                  <div key={s.label} style={{ background: 'var(--dark-card)', border: '1px solid var(--dark-border)', borderRadius: '0.5rem', padding: '0.75rem 1.1rem', textAlign: 'center' }}>
-                    <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.25rem', fontWeight: 900, color: 'var(--fire)' }}>{s.val}</div>
-                    <div style={{ fontSize: '0.65rem', color: 'var(--text-dim)', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '0.2rem' }}>{s.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div style={{ maxWidth: '720px' }}>
+            <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: '1.1rem', fontWeight: 700, color: 'var(--white)', marginBottom: '0.35rem' }}>Wire Fire #23260</div>
+            <div style={{ fontSize: '0.72rem', color: 'var(--fire)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>2024-25 INTO THE DEEP · Iron Mountain League</div>
+            <p style={{ color: 'var(--text-muted)', lineHeight: 1.9, fontSize: '0.93rem', marginBottom: '1.1rem' }}>
+              Our 2024-25 competition robot was built around a philosophy of simplicity and reliability. Clean wiring, minimal moving parts, and a compact footprint - optimized for consistent performance across every match at Iron Mountain League meets and the Oregon State Championship.
+            </p>
+            <p style={{ color: 'var(--text-muted)', lineHeight: 1.9, fontSize: '0.93rem' }}>
+              The robot features a vertical linear slide system for scoring, custom 3D-printed components, and a REV Control Hub running Java-based autonomous routines. It scored a season-high of 140 points and earned Wire Fire a spot as Finalist Alliance first pick at the league tournament.
+            </p>
           </div>
         </div>
       </section>
